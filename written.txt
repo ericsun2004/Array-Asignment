@@ -1,0 +1,86 @@
+Eric Sun
+Array Assginment
+
+1,
+
+Default parameters are set by assigning parameters with a value
+when defining a function, and the parameter will take this value
+if no values are passed into the function when later run. 
+
+Example:
+
+function howManyBonesDoIHaveIfILostALeg(bonesCount = 206) {
+
+	return(bonesCount - 28);
+
+} 
+
+2, 
+
+A rest parameter is the last parameter when inputing an indefinite
+number of parameters in an array, it collects all other parameters
+into a single array. The spread operator performs the opposite task
+as it takes the values in an array and makes them individual values.
+
+3, 
+
+	1,
+
+	let array = [5, 7, 9, 10, 2];
+
+	function smallestNum(array) {
+
+		let smallest = array.reduce((accumulator, elem) => (elem < accumulator ? elem : accumulator));	
+
+		console.log(smallest);	
+	}
+
+	2,
+
+	let array = [5, 7, 9, 10, 2];
+	
+	function sqrSum(array) {
+
+		let squareSum = array.reduce((accumulator, elem) => (accumulator + (elem * elem)));
+
+		console.log(squareSum);
+	}
+
+	3,
+
+	let array = [5, 7, 9, 10, 2];
+
+	function evenFinder(array) {
+
+		let even = array.filter(elem => elem % 2 == 0);
+
+		console.log(even);
+	}
+
+	4,
+
+	let array = [5, 7, 9, 10, 2];
+
+	function evSum(array) {
+
+		let even = array.filter(elem => elem % 2 == 0);
+
+		let evenSum = even.reduce((accumulator, elem) => (accumulator + elem));
+
+		console.log(evenSum);	
+	}
+
+	5,
+
+	let array = [5, 7, 10, 10, 2];
+
+	function unique(array) {
+
+		let special = array.filter((elem,i) => array.indexOf(elem) == i)
+
+		console.log(special);
+
+	}
+
+
+
